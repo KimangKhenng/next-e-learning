@@ -11,8 +11,21 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@pinia/nuxt',
     '@nuxtjs/google-fonts',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@sidebase/nuxt-auth'
   ],
+  auth: {
+    originEnvKey: 'NUXT_BASE_URL',
+    provider: {
+      type: 'local',
+      endpoints: {
+        signIn: { path: '/login', method: 'post' },
+        signOut: { path: '/logout', method: 'post' },
+        signUp: { path: '/register', method: 'post' },
+        getSession: { path: '/session', method: 'get' },
+      }
+    }
+  },
   css: ['~/assets/css/tailwind.css'],
   colorMode: {
     preference: 'system',
