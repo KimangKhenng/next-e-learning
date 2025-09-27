@@ -41,10 +41,16 @@
 
                     <div class="flex items-center gap-x-3">
                         <div class="flex space-x-1">
-                            <ShadowButton icon="i-lucide-log-in" text="login" color="bg-tfd" />
-                            <ShadowButton icon="i-lucide-user-round-plus" text="sign_up" color="bg-green-600" />
+                            <ShadowButton v-if="status == 'unauthenticated'" icon="i-lucide-log-in" text="login"
+                                color="bg-tfd" @on-click="openLogin" />
+                            <ShadowButton v-if="status == 'unauthenticated'" icon="i-lucide-user-round-plus"
+                                text="sign_up" color="bg-green-600" />
+                            <ShadowButton v-if="status == 'authenticated'" icon="i-lucide-log-out" text="logout"
+                                color="bg-red-600" @on-click="signOut" />
                         </div>
                         <DarkModeToggle />
+                        <!-- <p> You are currently {{ status }}.</p>
+                        <p>{{ data?.username }}</p> -->
                         <div class="flex items-center space-x-1 bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
                             <button @click="setLocale('en')" :class="[
                                 'flex items-center space-x-1 px-2 py-1 rounded-md text-xs sm:text-sm font-medium transition-colors',
@@ -81,9 +87,13 @@
 
                     <div class="flex flex-col gap-y-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                         <div class="flex space-x-1">
-                            <ShadowButton icon="i-lucide-log-in" text="login" color="bg-tfd" />
-                            <ShadowButton icon="i-lucide-user-round-plus" text="sign_up" color="bg-green-600" />
+                            <ShadowButton v-if="status.unauthenticated" icon="i-lucide-log-in" text="login"
+                                color="bg-tfd" />
+                            <ShadowButton v-if="status.unauthenticated" icon="i-lucide-user-round-plus" text="sign_up"
+                                color="bg-green-600" />
                             <DarkModeToggle />
+                            <p> You are currently {{ status }}.</p>
+                            <p>{{ data?.username }}</p>
                         </div>
                         <div class="flex items-center justify-between">
 
@@ -118,7 +128,28 @@
 </template>
 
 <script setup lang="ts">
+const {
+    status,
+    data,
+    lastRefreshedAt,
+    token,
+    refreshToken,
+    getSession,
+    signUp,
+    signIn,
+    signOut,
+    refresh
+} = useAuth()
+
 import type { NavigationMenuItem } from '@nuxt/ui'
+
+import { Login } from '#components'
+const overlay = useOverlay()
+const loginModal = overlay.create(Login)
+
+async function openLogin() {
+    const instance = loginModal.open({})
+}
 
 const { locale, setLocale } = useI18n()
 const config = useRuntimeConfig()

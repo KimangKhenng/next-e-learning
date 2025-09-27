@@ -172,5 +172,25 @@
     "confessName": "Confess Name"
   },
   "english": "English",
-  "khmer": "Khmer"
+  "khmer": "Khmer",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "signInDescription": "Welcome back! Please sign in to your account.",
+  "signUpDescription": "Create a new account to get started.",
+  "enterEmail": "Enter your email address",
+  "enterPassword": "Enter your password",
+  "enterFirstName": "Enter your first name",
+  "enterLastName": "Enter your last name",
+  "confirmPassword": "Confirm Password",
+  "rememberMe": "Remember me",
+  "forgotPassword": "Forgot Password?",
+  "orContinueWith": "Or continue with",
+  "agreeToTerms": "I agree to the terms and conditions",
+  "cancel": "Cancel",
+  "dontHaveAccount": "Don't have an account yet?",
+  "signUpHere": "Sign up here",
+  "signInWithGoogle": "Sign in with Google",
+  "signInWithGitHub": "Sign in with GitHub",
+  "signInWithFacebook": "Sign in with Facebook",
+  "emailAddress": "Email address"
 }

@@ -172,5 +172,25 @@
     "confessName": "ឈ្មោះសារភាព"
   },
   "english": "អង់គ្លេស",
-  "khmer": "ខ្មែរ"
+  "khmer": "ខ្មែរ",
+  "signIn": "ចូល",
+  "signUp": "ចុះឈ្មោះ",
+  "signInDescription": "សូមស្វាគមន៍ការត្រលប់មកវិញ! សូមចូលទៅកាន់គណនីរបស់អ្នក។",
+  "signUpDescription": "បង្កើតគណនីថ្មីដើម្បីចាប់ផ្ដើម។",
+  "enterEmail": "បញ្ចូលអាស័យដ្ឋានអ៊ីមែលរបស់អ្នក",
+  "enterPassword": "បញ្ចូលលេខសំងាត់របស់អ្នក",
+  "enterFirstName": "បញ្ចូលឈ្មោះរបស់អ្នក",
+  "enterLastName": "បញ្ចូលនាមត្រកូលរបស់អ្នក",
+  "confirmPassword": "បញ្ជាក់លេខសំងាត់",
+  "rememberMe": "ចងចាំខ្ញុំ",
+  "forgotPassword": "ភ្លេចលេខសំងាត់?",
+  "orContinueWith": "ឬបន្តជាមួយ",
+  "agreeToTerms": "ខ្ញុំយល់ព្រមតាមលក្ខខណ្ឌ",
+  "cancel": "បោះបង់",
+  "dontHaveAccount": "មិនទាន់មានគណនីទេ?",
+  "signUpHere": "ចុះឈ្មោះទីនេះ",
+  "signInWithGoogle": "ចូលជាមួយ Google",
+  "signInWithGitHub": "ចូលជាមួយ GitHub",
+  "signInWithFacebook": "ចូលជាមួយ Facebook",
+  "emailAddress": "អាស័យដ្ឋានអ៊ីមែល"
 }
